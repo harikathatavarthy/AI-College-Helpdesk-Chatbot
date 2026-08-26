@@ -83,31 +83,6 @@ python app.py
 http://127.0.0.1:5000
 ```
 
----
-
-## 📸 Screenshots
-- Login Page
-  ![Login Page](screenshots/login.png)
-- College Selection Page
-- Chat Interface
-- Admission Information
-- Placement Information
-- Facilities Information
-
----
-
-## 🎥 Demo Video
-
-Upload a short video demonstrating:
-
-- User Login
-- College Selection
-- Asking Questions
-- Chatbot Responses
-- Overall Project Workflow
-
----
-
 ## 🎯 Future Enhancements
 
 - Integration with AI language models
@@ -120,11 +95,10 @@ Upload a short video demonstrating:
 
 ## 👩‍💻 Developer
 
-**Harika Athmuri**
+**Harika Thatavarthy**
 
 M.Tech (Data Science)
 
-Python | Flask | AI | Machine Learning Enthusiast
 
 ---
 
