@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ college.name }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="header">
+
+        <h2>🏫 {{ college.name }}</h2>
+
+        <div class="right">
+
+            <a href="/chatbot">
+                <button>⬅ Back</button>
+            </a>
+
+            <a href="/logout">
+                <button>Logout</button>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="container">
+
+        <!-- ================= LEFT PANEL ================= -->
+
+        <div class="sidebar">
+
+            <h3>Quick Topics</h3>
+
+            <form method="POST">
+
+                <button class="topic" name="msg" value="Tell me about the history">
+                    📖 History
+                </button>
+
+                <button class="topic" name="msg" value="What is the vision?">
+                    🎯 Vision
+                </button>
+
+                <button class="topic" name="msg" value="What is the mission?">
+                    🎯 Mission
+                </button>
+
+                <button class="topic" name="msg" value="What courses are offered?">
+                    📚 Courses
+                </button>
+
+                <button class="topic" name="msg" value="What are the fees?">
+                    💰 Fees
+                </button>
+
+                <button class="topic" name="msg" value="Who is eligible?">
+                    ✅ Eligibility
+                </button>
+
+                <button class="topic" name="msg" value="How can I get admission?">
+                    🎓 Admission
+                </button>
+
+                <button class="topic" name="msg" value="What is the cutoff?">
+                    📊 Cutoff
+                </button>
+
+                <button class="topic" name="msg" value="Tell me about placements">
+                    💼 Placements
+                </button>
+
+                <button class="topic" name="msg" value="Tell me about hostel">
+                    🏨 Hostel
+                </button>
+
+                <button class="topic" name="msg" value="Transport facility">
+                    🚌 Transport
+                </button>
+
+                <button class="topic" name="msg" value="Facilities available">
+                    🏛 Facilities
+                </button>
+
+                <button class="topic" name="msg" value="Tell me about examinations">
+                    📝 Exams
+                </button>
+
+                <button class="topic" name="msg" value="Contact details">
+                    📞 Contact
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- ================= CHAT ================= -->
+
+        <div class="chat-area">
+
+            <!-- Welcome card (shown only when chat is empty) -->
+
+            {% if history|length == 0 %}
+
+            <div class="welcome">
+
+                <h3>🤖 Welcome!</h3>
+
+                <br>
+
+                <p>
+                    I'm your virtual college assistant.
+                </p>
+
+                <br>
+
+                <p>
+                    I can answer your questions about:
+                </p>
+
+                <br>
+
+                <ul style="margin-left:25px; line-height:2;">
+
+                    <li>Admissions</li>
+
+                    <li>Courses</li>
+
+                    <li>Fees</li>
+
+                    <li>Eligibility</li>
+
+                    <li>Placements</li>
+
+                    <li>Hostel</li>
+
+                    <li>Transport</li>
+
+                    <li>Facilities</li>
+
+                    <li>Contact Details</li>
+
+                    <li>Examinations</li>
+
+                </ul>
+
+                <br>
+
+                <p>
+                    👉 Type your question below or choose a topic from the left.
+                </p>
+
+            </div>
+
+            {% endif %}
+
+            <!-- ================= CHAT HISTORY ================= -->
+
+            <div class="chat-box" id="chatBox">
+
+                {% for chat in history %}
+
+                <div class="user">
+
+                    <div class="bubble">
+
+                        👤 {{ chat.user }}
+
+                    </div>
+
+                </div>
+
+                <div class="bot">
+
+                    <div class="bubble">
+
+                        🤖 {{ chat.bot }}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <!-- ================= INPUT ================= -->
+
+            <form class="chat-input" method="POST">
+
+                <input
+                    type="text"
+                    name="msg"
+                    placeholder="Ask anything about this college..."
+                    autocomplete="off"
+                    required>
+
+                <button type="submit">
+                    Send
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Auto-scroll to latest message
+
+        let chatBox = document.getElementById("chatBox");
+
+        if(chatBox){
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
