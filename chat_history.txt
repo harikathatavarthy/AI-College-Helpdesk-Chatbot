@@ -1,0 +1,96 @@
+User : hii
+Bot  : Hello! Welcome to the College Helpdesk.
+
+User : transport
+Bot  : College buses are available from different locations in the city.
+
+User : fees
+Bot  : The fee structure varies by course. Please contact the Accounts Section.
+
+User : hod
+Bot  : Unknown Question
+
+User : placement
+Bot  : Top companies visit the campus every year for placements.
+
+User : canteen
+Bot  : The college has a hygienic canteen serving breakfast, lunch and snacks.
+
+College : Sunrise Engineering College
+User : hostel
+Bot : Hostel with Wi-Fi and mess.
+
+College : Sunrise Engineering College
+User : contact
+Bot : 9123456780
+
+========================================
+College : LBRCE
+User : canteen
+Bot : Unknown Question
+
+========================================
+College : LBRCE
+User : canteen
+Bot : Unknown Question
+
+========================================
+College : LBRCE
+User : library
+Bot : Unknown Question
+
+========================================
+College : VVIT
+User : placement
+Bot : Unknown Question
+
+========================================
+College : VVIT
+User : contact
+Bot : https://www.vvitguntur.com
+
+========================================
+College : VVIT
+User : hostel
+Bot : Hostel facility available with separate accommodation for boys and girls.
+
+========================================
+College : VVIT
+User : admission
+Bot : Admission through AP EAMCET, JEE and management quota.
+
+========================================
+College : VVIT
+User : canteen
+Bot : Unknown Question
+
+========================================
+College : VVIT
+User : transport
+Bot : Unknown Question
+
+========================================
+College : VVIT
+User : transport
+Bot : Unknown Question
+
+========================================
+College : LBRCE
+User : canteen
+Bot : Unknown Question
+
+========================================
+College : LBRCE
+User : exit
+Bot : Unknown Question
+
+========================================
+College : LBRCE
+User : exit
+Bot : Unknown Question
+
+========================================
+College : LBRCE
+User : exit
+Bot : Unknown Question
+
